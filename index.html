@@ -54,24 +54,38 @@
 
       .logo-container {
         display: flex;
-        align-items: center;
+        flex-direction: column; /* Yozuvlarni ustma-ust qilish uchun */
+        align-items: flex-start;
         text-decoration: none;
         transition: var(--transition);
       }
 
-      /* Faqat Yaponcha Matnli Logotip */
+      /* ASOSIY YAPONCHA YOZUV */
       .brand-name {
         font-family: "Noto Sans JP", sans-serif;
-        font-size: 24px; /* Matn o'lchami */
-        font-weight: 700;
-        color: var(--white);
-        letter-spacing: 2px;
+        font-size: 26px;
+        font-weight: 900;
+        color: var(--gold); /* Oltin rang */
+        letter-spacing: 1px;
+        line-height: 1;
         transition: var(--transition);
       }
 
+      /* ONLY ONE SLOGANI */
+      .brand-slogan {
+        font-family: "Montserrat", sans-serif;
+        font-size: 11px;
+        font-weight: 400;
+        color: var(--white);
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        margin-top: 5px;
+        opacity: 0.8;
+      }
+
       .logo-container:hover .brand-name {
-        color: var(--gold);
-        transform: translateX(5px);
+        filter: brightness(1.2);
+        transform: translateX(3px);
       }
 
       /* Language Switcher */
@@ -334,9 +348,10 @@
   </head>
   <body>
     <nav>
-      <a href="#" class="logo-container">
-        <!-- Faqat Yaponcha Matn Qoldi -->
-        <div class="brand-name">アミル株式会社</div>
+      <!-- YANGILANGAN LOGO QISMI -->
+      <a href="index.html" class="logo-container">
+        <span class="brand-name">アミル株式会社</span>
+        <span class="brand-slogan">ONLY ONE</span>
       </a>
 
       <button class="lang-switch" onclick="toggleLang()" id="langBtn">
@@ -517,7 +532,7 @@
               letter-spacing: 5px;
               font-size: 14px;
               margin-bottom: 15px;
-              font-family: &quot;Montserrat&quot;;
+              font-family: 'Montserrat';
             "
           >
             WHO WE ARE
@@ -526,7 +541,7 @@
             style="
               font-size: clamp(30px, 5vw, 42px);
               font-weight: 900;
-              font-family: &quot;Montserrat&quot;;
+              font-family: 'Montserrat';
             "
           >
             COMPANY OUTLINE
@@ -564,7 +579,7 @@
               "
             >
               <strong>「日本品質を世界へ、新たな価値の創造」</strong><br />
-              AMIR GROUPは常に最高水準の品質を追求し、社会の発展に貢献します。
+              AMIR GROUPは常に最高水準 of 品質を追求し、社会の発展に貢献します。
             </p>
           </div>
           <div>
@@ -677,7 +692,7 @@
         realestate: {
           jp: [
             "不動産・コンサルティング",
-            "理想の地、理想の投資。日本での資産形成をプロフェッショナルな視点でサポートします。",
+            "理想の地、理想の投資. 日本での資産形成をプロフェッショナルな視点でサポートします。",
           ],
           en: [
             "Real Estate",
